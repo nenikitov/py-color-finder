@@ -1,12 +1,10 @@
 from typing import Any
 from enum import Enum
 
-import webcolors
-
-ColorType = str | tuple[int, int, int]
+from .utils import ColorType
 
 
-def ColorDistanceFormula(Enum):
+def ColorDifferenceMethod(Enum):
     pass
 
 
