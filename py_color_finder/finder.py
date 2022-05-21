@@ -1,12 +1,14 @@
 from typing import Any
 from enum import Enum
 
-from .utils import ColorType
+from . import utils
+from . import difference
 
 
-def ColorDifferenceMethod(Enum):
-    pass
+class ColorDifferenceMethod(Enum):
+    EUCLIDEAN          = difference.euclidean
+    EUCLIDEAN_WEIGHTED = difference.euclidean_weighted
 
 
-def closest_color(hex: ColorType, palette: list[ColorType] | dict[str, Any], method) -> str:
+def closest_color(hex: utils.ColorType, palette: list[utils.ColorType] | dict[str, Any], method: difference.DifferenceFunction=ColorDifferenceMethod.EUCLIDEAN_WEIGHTED) -> str:
     print(hex)
