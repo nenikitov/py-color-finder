@@ -1,8 +1,9 @@
 import webcolors
 
-ColorType = str | tuple[int, int, int]
+TupleColor = tuple[int, int, int]
+ColorType = str | TupleColor
 
-def get_rgb(col: ColorType) -> tuple[int, int, int]:
+def get_rgb(col: ColorType) -> TupleColor:
     if type(col) is str:
         return webcolors.hex_to_rgb(col)
     elif type(col) is tuple and len(col) == 3:

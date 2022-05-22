@@ -6,7 +6,7 @@ from . import utils
 DifferenceFunction = Callable[[utils.ColorType, utils.ColorType], float]
 
 
-def get_delta(col1: utils.ColorType, col2: utils.ColorType) -> tuple[int, int, int]:
+def get_delta(col1: utils.ColorType, col2: utils.ColorType) -> utils.TupleColor:
     r1, g1, b1 = utils.get_rgb(col1)
     r2, g2, b2 = utils.get_rgb(col2)
 
